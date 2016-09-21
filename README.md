@@ -3,7 +3,7 @@ Overview
 
 This study compares the exponential distribution with the Central Limit Theorem (CLT). The CLT says that as sample size increases, the distribution of averages of iid variables (given they are normalized) approaches a standard normal distribution. Here, we use the exponential distribution to explore the CLT.
 
-The exponential distribution is useful for modeling the time elapsed between events that occur at a given rate. There is only one parameter, the rate parameter $\lambda$. Both the mean and the standard deviation of the exponential distribution are $\frac{1}{\lambda}$.
+The exponential distribution is useful for modeling the time elapsed between events that occur at a given rate. There is only one parameter, the rate parameter λ. Both the mean and the standard deviation of the exponential distribution are 1/λ.
 
 Simulations
 -----------
@@ -35,7 +35,7 @@ zdist <- rnorm(nsim)
 Sample Mean versus Theoretical Mean
 -----------------------------------
 
-The mean of the exponential distribution is given by $\frac{1}{\lambda}$. Given that $\lambda = 0.2$ for our study, the theoretical mean is equal to 5. The histogram below shows the spread of 1000 sample means we simulated earlier.
+The mean of the exponential distribution is given by 1/λ. Given that λ = 0.2 for our study, the theoretical mean is equal to 5. The histogram below shows the spread of 1000 sample means we simulated earlier.
 
 ``` r
 require(ggplot2)
@@ -54,7 +54,7 @@ The black vertical line centered at 5 represents the theoretical mean of the dis
 Sample Variance versus Theoretical Variance
 -------------------------------------------
 
-The variance of the exponential distribution is given by $\frac{1}{\lambda}^2$. Given that $\lambda = 0.2$ for our study, the theoretical variance is equal to 25. The histogram below shows the spread of 1000 sample variances we simulated earlier.
+The variance of the exponential distribution is given by 1/λ^2. Given that λ = 0.2$ for our study, the theoretical variance is equal to 25. The histogram below shows the spread of 1000 sample variances we simulated earlier.
 
 ``` r
 t_var <- (1/lambda^2)
