@@ -41,12 +41,12 @@ The mean of the exponential distribution is given by \(1/\lambda\). Given that \
 require(ggplot2)
 
 t_mean <- 1/lambda
-qplot(s_means, geom = "histogram", binwidth = 0.1, fill = "red", 
+qplot(s_means, geom = "histogram", binwidth = 0.1, fill = "red",
       main = "Sample Means", ylab = "", xlab = "") + geom_vline(xintercept = t_mean,
       lwd = 2) + theme(legend.position = "none")
 ```
 
-<img src="StatInferenceProject_SMT_files/figure-markdown_github/unnamed-chunk-2-1.png" title="" alt="" style="display: block; margin: auto;" />
+<img src="images/figure-markdown_github/unnamed-chunk-2-1.png" title="" alt="" style="display: block; margin: auto;" />
 
 The black vertical line centered at 5 represents the theoretical mean of the distribution. The distribution of sample means peaks around 5 as well. The distribution of sample means resembles a normal distribution.
 
@@ -58,11 +58,11 @@ The variance of the exponential distribution is given by \((1/\lambda)^2\). Give
 ``` r
 t_var <- (1/lambda^2)
 qplot(s_vars, geom = "histogram", binwidth = 1, fill = "red", main = "Sample Variances",
-      ylab = "", xylab = "", xlim = c(0, 70)) + geom_vline(xintercept = t_var, 
+      ylab = "", xylab = "", xlim = c(0, 70)) + geom_vline(xintercept = t_var,
       lwd = 2) + theme(legend.position = "none")
 ```
 
-<img src="StatInferenceProject_SMT_files/figure-markdown_github/unnamed-chunk-3-1.png" title="" alt="" style="display: block; margin: auto;" />
+<img src="images/figure-markdown_github/unnamed-chunk-3-1.png" title="" alt="" style="display: block; margin: auto;" />
 
 The black vertical line centered at 25 represents the theoretical variance of the distribution. The distribution of sample variances peaks around 25 as well. The distribution of sample variances does not resemble a normal distribution.
 
@@ -75,7 +75,7 @@ Since we have run a large number of simulations (1000), our distribution of norm
 # Normalize the sample means & assemble into data frame
 avgmean <- mean(s_means)
 n_means <- (s_means - avgmean)/sqrt(s_vars/n)
-compare <- data.frame(vals = c(n_means, zdist), 
+compare <- data.frame(vals = c(n_means, zdist),
         dist = c(rep("Normalized Exponential Averages", nsim),
         rep("Standard Normal", nsim)))
 
@@ -83,6 +83,6 @@ compare <- data.frame(vals = c(n_means, zdist),
 qplot(vals, data = compare, fill = dist, xlab = "", ylab = "", binwidth = 0.3)
 ```
 
-![](StatInferenceProject_SMT_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](images/figure-markdown_github/unnamed-chunk-4-1.png)
 
 This histogram shows that the CLT holds true for our 1000 exponential simulations. The overall shapes of the two datasets peak around the same mean and taper with similar standard deviations.
