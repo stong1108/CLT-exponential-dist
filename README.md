@@ -54,7 +54,7 @@ The black vertical line centered at 5 represents the theoretical mean of the dis
 Sample Variance versus Theoretical Variance
 -------------------------------------------
 
-The variance of the exponential distribution is given by 1/λ^2. Given that λ = 0.2$ for our study, the theoretical variance is equal to 25. The histogram below shows the spread of 1000 sample variances we simulated earlier.
+The variance of the exponential distribution is given by 1/λ^2. Given that λ = 0.2 for our study, the theoretical variance is equal to 25. The histogram below shows the spread of 1000 sample variances we simulated earlier.
 
 ``` r
 t_var <- (1/lambda^2)
